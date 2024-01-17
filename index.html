@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIDB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1000px; /* Maximum width for large screens */
+            width: 80%; /* Responsive width */
+            margin: auto; /* Center the container */
+            overflow: hidden;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .search-box {
+            margin: 20px 0;
+            text-align: center;
+          font-size: 1.5em;
+        }
+        .radio-buttons {
+            text-align: center;
+        }
+        .radio-buttons label {
+            margin-right: 10px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%; /* Slightly wider on smaller screens */
+            }
+        }
+
+        /* Adjustments for very small screens */
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 95%; /* Use most of the screen on very small devices */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIDB</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search...">
+        </div>
+        <div class="multi-select">
+            <select name="category" multiple>
+         <option value="audio">Audio</option>
+        <option value="automation">Automation</option>
+        <option value="bot">Bot</option>
+        <option value="code">Code</option>
+        <option value="custom-chat-bot">Custom-Chat-Bot</option>
+        <option value="data">Data</option>
+        <option value="design">Design</option>
+        <option value="documentation">Documentation</option>
+        <option value="email">Email</option>
+        <option value="fun">Fun</option>
+        <option value="game">Game</option>
+        <option value="image">Image</option>
+        <option value="image-utility">Image-Utility</option>
+        <option value="images">Images</option>
+        <option value="images-and-video">Images-and-Video</option>
+        <option value="language">Language</option>
+        <option value="legal">Legal</option>
+        <option value="math">Math</option>
+        <option value="money">Money</option>
+        <option value="music">Music</option>
+        <option value="other">Other</option>
+        <option value="platform">Platform</option>
+        <option value="planning">Planning</option>
+        <option value="presentation">Presentation</option>
+        <option value="prompts">Prompts</option>
+        <option value="research">Research</option>
+        <option value="resources">Resources</option>
+        <option value="resume">Resume</option>
+        <option value="search">Search</option>
+        <option value="self-improvement">Self-Improvement</option>
+        <option value="SEO">SEO</option>
+        <option value="sound">Sound</option>
+        <option value="summarize">Summarize</option>
+        <option value="text">Text</option>
+        <option value="to-do">To-Do</option>
+        <option value="transcription">Transcription</option>
+        <option value="transform">Transform</option>
+        <option value="utility">Utility</option>
+        <option value="video">Video</option>
+        <option value="voice">Voice</option>
+        <option value="web">Web</option>
+        <option value="web builder">Web Builder</option>
+        <option value="web host">Web Host</option>
+        <option value="website">Website</option>
+        <option value="words">Words</option>
+        <option value="words-marketing">Words-Marketing</option>
+        <option value="words-toolkit">Words-Toolkit</option>
+    </select>
+</div>
+ </div>
+
+    <script>
+        // JavaScript code to handle search and integration with Google Sheets will go here
+    </script>
+</body>
+</html> 
