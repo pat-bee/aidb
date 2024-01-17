@@ -1,9 +1,7 @@
-var GoogleAuth; // Google Auth object.
-
 function initClient() {
     gapi.client.init({
         'apiKey': 'AIzaSyBkd15kwevnsuIMktUsseBSp72L48zN3Kk',
-        'clientId': '631106624759-n4q4eqavd2h4vqc1q9pbii2p8tvlrte7.apps.googleusercontent.com',
+        'clientId': 'AIzaSyBkd15kwevnsuIMktUsseBSp72L48zN3Kk',
         'scope': 'https://www.googleapis.com/auth/spreadsheets.readonly',
         'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4']
     }).then(function () {
@@ -13,23 +11,27 @@ function initClient() {
     });
 }
 
-function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-        console.log("Signed In");
-        // Perform API call to fetch data from Sheets
-    } else {
-        console.log("Not Signed In");
-        // Handle not signed in
-    }
-}
-
-function handleAuthClick() {
+function fetchSheetData() {
     if (GoogleAuth.isSignedIn.get()) {
-        GoogleAuth.signOut();
+        gapi.client.sheets.spreadsheets.values.get({
+            spreadsheetId: '1Y3MW_-ryZjv2JNBtGBs2BK-tASocBKUB0IjgLVb57CQ',
+            range: 'MASTER!F:L',
+        }).then(function(response) {
+            var range = response.result;
+            if (range.values.length > 0) {
+                // Process and display the data
+                for (i = 0; i < range.values.length; i++) {
+                    var row = range.values[i];
+                    // Assume row[0] is Name, row[1] is URL, row[2] is Description
+                    // Add your code to display this information
+                }
+            } else {
+              console.log('No data found.');
+            }
+        }, function(response) {
+            console.log('Error: ' + response.result.error.message);
+        });
     } else {
-        GoogleAuth.signIn();
+        console.log("User not signed in.");
     }
 }
-
-// Load the API client and auth library
-gapi.load('client:auth2', initClient);
