@@ -1,6 +1,6 @@
 // Variables for API key, Sheet ID
-const apiKey = 'YOUR_API_KEY';
-const sheetId = 'YOUR_SHEET_ID';
+const apiKey = 'AIzaSyBkd15kwevnsuIMktUsseBSp72L48zN3Kk';
+const sheetId = '1Y3MW_-ryZjv2JNBtGBs2BK-tASocBKUB0IjgLVb57CQ';
 
 // Function to fetch data from Google Sheet
 async function fetchData() {
