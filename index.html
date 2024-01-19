@@ -1,59 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AIDB</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 1000px;
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        .search-box {
-            margin: 20px 0;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        .multi-select {
-            text-align: center;
-        }
-        .multi-select input[type="checkbox"] {
-            margin-right: 5px;
-        }
-        .multi-select label {
-            margin-right: 20px;
-            font-size: 1em;
-        }
-
-        /* Responsive design */
-        @media screen and (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .container {
-                width: 95%;
-            }
-        }
-    </style>
+    <!-- Head content: title, styles, etc. -->
 </head>
 <body>
     <div class="container">
         <h1>AIDB</h1>
         <div class="search-box">
+            <!-- Search input: used to enter search query -->
             <input type="text" id="search-input" placeholder="Search...">
         </div>
         <div class="multi-select">
 
-        <label><input type="checkbox" name="category" value="audio">Audio</label>
+<label><input type="checkbox" name="category" value="audio">Audio</label>
 <label><input type="checkbox" name="category" value="automation">Automation</label>
 <label><input type="checkbox" name="category" value="bot">Bot</label>
 <label><input type="checkbox" name="category" value="code">Code</label>
@@ -101,11 +60,11 @@
 <label><input type="checkbox" name="category" value="words-marketing">Words-Marketing</label>
 <label><input type="checkbox" name="category" value="words-toolkit">Words-Toolkit</label>
 
-    </div>
+   </div>
         <button onclick="handleAuthClick()">Sign In</button>
-
+        <!-- Placeholder for search results -->
+        <div id="results-container"></div>
     </div>
-
     <script>
         // JavaScript code to handle search and integration with Google Sheets will go here
         <script async defer src="https://apis.google.com/js/api.js"></script>
